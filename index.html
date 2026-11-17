@@ -1,16 +1,49 @@
-<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>YakBotGuide · คู่มือผู้ดูแลเซิร์ฟเวอร์ Discord</title><link rel="icon" href="./icon.png"><style>
-*{box-sizing:border-box}body{margin:0;background:#faf9f3;color:#193b31;font:17px/1.85 "Leelawadee UI",Tahoma,sans-serif}header,footer{background:#16382f;color:white;padding:14px max(5vw,calc((100vw - 1160px)/2));display:flex;align-items:center;gap:12px}header img{width:40px;border-radius:9px}header b{font:700 24px Arial}main{max-width:1220px;margin:auto;padding:0 5%}.hero{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:30px;padding:52px 0;border-bottom:1px solid #bbc9bc}.hero img{width:100%;border-radius:12px}small{font:bold 12px Arial;letter-spacing:.13em;color:#866122}h1{font-size:clamp(40px,5vw,68px);line-height:1.25;margin:12px 0}h2{font-size:30px;margin:0}a{color:#245b46}.layout{display:grid;grid-template-columns:180px minmax(0,1fr);gap:6%;padding:40px 0}nav{position:sticky;top:24px;align-self:start;border-left:3px solid #b29557;padding-left:16px}nav a{display:block;text-decoration:none;padding:4px 0}a:hover{text-decoration:underline}section{border-bottom:1px solid #ccd4c9;margin-bottom:28px;padding-bottom:20px;scroll-margin:20px}pre{background:#193c32;color:#fff;padding:16px;border-radius:8px;overflow:auto}code{font-family:Consolas,monospace;overflow-wrap:anywhere}li{margin-bottom:8px}summary{cursor:pointer;font-weight:bold}details{padding:10px 0}footer{font-size:14px}@media(max-width:760px){.hero,.layout{grid-template-columns:1fr}.layout{gap:30px}nav{position:static}.hero{padding:25px 0}}
-.invite{display:inline-block;background:#245943;color:white;padding:10px 20px;border-radius:7px;text-decoration:none;font-weight:bold}.systems{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;margin-top:12px}.systems a{padding:8px 13px;background:#e9eee2;border-radius:6px;text-decoration:none}h3{font-size:26px;margin:6px 0}a:focus-visible,summary:focus-visible{outline:3px solid #ae792a;outline-offset:3px}</style></head><body><header id="home"><img src="./icon.png" alt=""><b>YakBotGuide</b> คู่มือแอดมิน Discord</header><main><div class="hero"><div><h1>ตั้งค่า YakBot</h1><p>เชิญบอท ตั้งสิทธิ์ในช่อง และเลือกระบบที่ต้องการใช้ในเซิร์ฟเวอร์ของคุณ</p><a class="invite" href="https://discord.com/oauth2/authorize?client_id=1555179219745767465">เชิญ YakBot เข้าเซิร์ฟเวอร์ <span aria-hidden="true">↗</span></a></div><img src="./banner.png" alt="ภาพประจำ YakBot"></div><div class="layout"><nav aria-label="เมนูหลัก"><b>เมนูหลัก</b><a href="#start">เริ่มต้นใช้งาน</a><a href="#systems">คู่มือแต่ละระบบ</a><a href="#rights">สิทธิ์และโควตา</a><a href="#help">แก้ปัญหา</a><a href="#contact">ติดต่อผู้ดูแลบอท</a><a href="#credits">เครดิต</a></nav><article>
-<section id="start"><h2>เริ่มต้นใช้งาน</h2><ol><li>กดปุ่มเชิญด้านบน เลือกเซิร์ฟเวอร์ที่คุณมีสิทธิ์จัดการ แล้วกดยืนยันใน Discord</li><li>ในช่องโพสต์และช่องแจ้งเตือน ให้บอทมีสิทธิ์ View Channel, Send Messages, Embed Links และ Read Message History</li><li>ใช้บัญชีเจ้าของเซิร์ฟเวอร์หรือ Administrator พิมพ์ <code>/add-goldprices-post</code> เลือกช่องโพสต์ ช่องแจ้งเตือน และสถานะการแจ้งเตือน จากนั้นเปิดช่องโพสต์เพื่อดูราคาทองครั้งแรก</li></ol></section>
-<section id="systems"><h2>คู่มือแต่ละระบบ</h2><div class="systems"><a href="#exchange">อัตราแลกเปลี่ยน ↓</a><a href="#oil">ราคาน้ำมัน PTT ↓</a><a href="#gold">ราคาทองสมาคมฯ ↓</a><a href="#gold-hsh">ราคาทองฮั่วเซ่งเฮง ↓</a><a href="#network">ตรวจเครือข่าย ↓</a><a href="#monitor">มอนิเตอร์และแจ้งเตือน ↓</a><a href="#daily">รายงานสถานะประจำวัน ↓</a><a href="#players">ประกาศผู้เล่น ↓</a></div></section><section id="exchange"><small>เปิดให้เซิร์ฟเวอร์ใหม่</small><h3>อัตราแลกเปลี่ยน</h3><p>ดูอัตราอ้างอิงของ 25 สกุลเงินเทียบกับบาท</p><ol><li>ใช้ <code>/add-exchange-post</code> เลือกช่องโพสต์</li><li>ดูโพสต์ในช่องที่เลือก หรือใช้ <code>/list-exchange-post</code> เพื่อดู Post ID</li><li>เมื่อต้องการย้ายช่อง ใช้ <code>/update-exchange-post</code> แล้วเลือก ID หากต้องการลบ ใช้ <code>/remove-exchange-post</code></li></ol></section>
-<section id="oil"><small>เปิดให้เซิร์ฟเวอร์ใหม่</small><h3>ราคาน้ำมัน PTT</h3><p>ดูราคาขายปลีกที่ PTT Station ในกรุงเทพฯ และปริมณฑล</p><ol><li>ใช้ <code>/add-oilprices-post</code> เลือกช่องโพสต์</li><li>ดูโพสต์ในช่องที่เลือก หรือใช้ <code>/list-oilprices-post</code> เพื่อดู Post ID</li><li>เมื่อต้องการย้ายช่อง ใช้ <code>/update-oilprices-post</code> แล้วเลือก ID หากต้องการลบ ใช้ <code>/remove-oilprices-post</code></li></ol></section>
-<section id="gold"><small>เปิดให้เซิร์ฟเวอร์ใหม่</small><h3>ราคาทองสมาคมฯ</h3><p>ติดตามราคารับซื้อและขายออกของทองคำแท่งและทองรูปพรรณ 96.5%</p><ol><li>ใช้ <code>/add-goldprices-post</code> เลือกช่องโพสต์ ช่องแจ้งเตือน และเลือกว่าจะเปิดแจ้งเตือนหรือไม่</li><li>ดูโพสต์ในช่องที่เลือก หรือใช้ <code>/list-goldprices-post</code> เพื่อดู Post ID</li><li>เมื่อต้องการย้ายช่อง ใช้ <code>/update-goldprices-post</code> แล้วเลือก ID หากต้องการลบ ใช้ <code>/remove-goldprices-post</code></li></ol></section>
-<section id="gold-hsh"><small>ต้องขอเปิดเพิ่ม</small><h3>ราคาทองฮั่วเซ่งเฮง</h3><p>เปรียบเทียบราคาขายออกทองคำแท่งฮั่วเซ่งเฮงกับราคาสมาคมฯ และรับแจ้งเตือนเมื่อส่วนต่างเข้าเกณฑ์</p><ol><li>ใช้ <code>/add-goldhsh-post</code> เลือกช่องโพสต์ ช่องแจ้งเตือน และเลือกว่าจะเปิดแจ้งเตือนหรือไม่</li><li>ดูโพสต์ในช่องที่เลือก หรือใช้ <code>/list-goldhsh-post</code> เพื่อดู Post ID</li><li>เมื่อต้องการย้ายช่อง ใช้ <code>/update-goldhsh-post</code> แล้วเลือก ID หากต้องการลบ ใช้ <code>/remove-goldhsh-post</code></li></ol></section>
-<section id="network"><small>ต้องขอเปิดเพิ่ม</small><h3>ตรวจเครือข่าย</h3><p>ทดสอบการเชื่อมต่อจากฝั่งบอท</p><ol><li>ใช้ <code>/network-check-ping</code> สำหรับ ICMP หรือ <code>/network-check-tcp</code> แล้วระบุโฮสต์และพอร์ต เช่น 443</li><li>ใช้ <code>/network-check-http</code> เพื่อตรวจ HTTP หรือ <code>/network-check-web</code> พร้อม URL เต็มเพื่อดูผล DNS, TCP, TLS และ HTTP ทีละขั้น</li><li>อ่านผลในข้อความตอบกลับที่เห็นเฉพาะผู้สั่ง</li></ol></section>
-<section id="monitor"><small>ต้องขอเปิดเพิ่ม</small><h3>มอนิเตอร์และแจ้งเตือน</h3><p>ติดตามสถานะเว็บไซต์หรือโฮสต์ต่อเนื่อง และแจ้งเมื่อสถานะเปลี่ยน</p><ol><li>ใช้ <code>/add-monitor-post</code> เลือกช่องโพสต์ ช่องแจ้งเตือน และเปิดหรือพักการแจ้งเตือน</li><li>เลือก <code>/add-monitor-target-http</code>, <code>/add-monitor-target-tcp</code> หรือ <code>/add-monitor-target-icmp</code> แล้วเลือก Post ID ในฟอร์ม กรอก Target ID ชื่อที่แสดง และปลายทาง บอทจะทดสอบก่อนบันทึก</li><li>ใช้ <code>/detail-monitor-post</code> ดูผล หรือ <code>/update-monitor-post</code> ย้ายช่อง ใช้ <code>/remove-monitor-target</code> เพื่อลบปลายทางเดียว การใช้ <code>/remove-monitor-post</code> จะลบทั้งโพสต์และเป้าหมายภายใน</li></ol></section>
-<section id="daily"><small>ต้องขอเปิดเพิ่ม</small><h3>รายงานสถานะประจำวัน</h3><p>ให้บอทส่งสถานะ เวลาทำงาน และความหน่วงไปยังช่องที่กำหนด</p><ol><li>ใช้ <code>/configure-status-notification</code> เลือกช่อง ใส่เวลาแบบ 24 ชั่วโมง เช่น <code>12:00</code> แล้วเปิด notification</li><li>ตรวจรายงานในช่องที่เลือกเมื่อถึงเวลา ค่าเริ่มต้นใช้เวลาไทย หากต้องการย้ายช่อง เปลี่ยนเวลา หรือพักรายงาน ให้ใช้คำสั่งเดิม</li></ol></section>
-<section id="players"><small>ต้องขอเปิดเพิ่ม</small><h3>ประกาศผู้เล่น</h3><p>ส่งประกาศเตือน แบน หรือปลดแบนผู้เล่นให้สมาชิกในช่องเห็น</p><ol><li>ใช้ <code>/configure-player-notice</code> เลือกช่องประกาศ</li><li>เปิด <code>/player-notice</code> เลือกประเภทประกาศ กรอกชื่อผู้เล่นและรายละเอียด แล้วส่งฟอร์ม</li><li>ตรวจโพสต์ใหม่ในช่องประกาศ หากต้องการให้การแบนหรือปลดแบนมีผลในเกม ให้ดำเนินการในเกมด้วย</li></ol></section>
-<section id="rights"><h2>สิทธิ์และโควตา</h2><p>เจ้าของเซิร์ฟเวอร์และ Administrator ใช้คำสั่งของระบบที่เซิร์ฟเวอร์ได้รับสิทธิ์ เซิร์ฟเวอร์ใหม่เปิดใช้อัตราแลกเปลี่ยน ราคาน้ำมัน และราคาทองสมาคมฯ</p><p>โควตาเริ่มต้นของระบบราคาคือประเภทละ 1 โพสต์ต่อเซิร์ฟเวอร์ เมื่อเปิดมอนิเตอร์จะสร้างได้ 3 โพสต์ แต่ละโพสต์เพิ่มได้สูงสุด 10 เป้าหมาย</p></section>
-<section id="help"><h2>แก้ปัญหา</h2><details><summary>ไม่เห็นคำสั่งในเมนู /</summary><p>ตรวจสิทธิ์ Administrator และดูว่าระบบที่ต้องการต้องขอเปิดเพิ่มหรือไม่</p></details><details><summary>บอทโพสต์ไม่ได้</summary><p>ตรวจสิทธิ์บอทในช่องที่เลือกตามรายการเริ่มต้นใช้งาน รวมถึงสิทธิ์ที่กำหนดทับในระดับช่อง</p></details><details><summary>สร้างโพสต์เพิ่มไม่ได้</summary><p>ตรวจจำนวนโพสต์เดิมด้วยคำสั่ง list ของระบบ หากต้องการเพียงย้ายช่อง ให้ใช้คำสั่ง update แล้วเลือก Post ID เดิม</p></details></section>
-<section id="contact"><h2>ติดต่อผู้ดูแลบอท</h2><p>เมื่อขอเปิดระบบหรือเพิ่มโควตา ให้ส่ง Server ID ชื่อระบบ และจำนวนโพสต์ที่ต้องการ หากแจ้งปัญหา ให้แนบชื่อคำสั่งและข้อความตอบกลับที่เห็นใน Discord</p></section>
-<section id="credits"><h2>เครดิต</h2><p>แหล่งข้อมูลที่ใช้ในโพสต์ของ YakBot</p><ul><li>อัตราแลกเปลี่ยน — Frankfurter</li><li>ราคาน้ำมัน PTT — ตารางราคาขายปลีกของสำนักงานนโยบายและแผนพลังงาน (สนพ.)</li><li>ราคาทองสมาคมฯ — สมาคมค้าทองคำ</li><li>ราคาทองฮั่วเซ่งเฮง — ฮั่วเซ่งเฮง</li></ul></section></article></div></main><footer>YakBotGuide · คู่มือผู้ดูแลเซิร์ฟเวอร์</footer></body></html>
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>หน้าแรก · YakBotGuide</title>
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#content">ข้ามไปยังเนื้อหา</a>
+<header><div class="bar"><a class="brand" href="index.html"><img src="icon.png" alt=""><b>YakBotGuide</b></a><span class="tag">คู่มือแอดมิน Discord</span>
+<details class="mobile"><summary aria-label="เมนูหลัก"><span aria-hidden="true">☰</span> เมนู</summary><nav aria-label="เมนูหลักบนมือถือ"><a href="index.html" aria-current="page">หน้าแรก</a>
+<details class="sub"><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html">2 · ตรวจเครือข่าย</a>
+<a href="monitor.html">4 · มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html">5 · อัตราแลกเปลี่ยน</a>
+<a href="oil.html">6 · ราคาน้ำมัน PTT</a>
+<a href="gold.html">7 · ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html">8 · ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html">9 · ประกาศผู้เล่น</a></div></details>
+<a href="rights.html">สิทธิ์และโควตา</a>
+<a href="help.html">แก้ปัญหา</a>
+<a href="contact.html">ติดต่อผู้ดูแลบอท</a>
+<a href="credits.html">เครดิต</a></nav></details></div></header>
+<img class="banner" src="banner.png" alt="แบนเนอร์ YakBot">
+<nav class="desk" aria-label="เมนูหลัก"><a href="index.html" aria-current="page">หน้าแรก</a>
+<details class="sub"><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html">2 · ตรวจเครือข่าย</a>
+<a href="monitor.html">4 · มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html">5 · อัตราแลกเปลี่ยน</a>
+<a href="oil.html">6 · ราคาน้ำมัน PTT</a>
+<a href="gold.html">7 · ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html">8 · ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html">9 · ประกาศผู้เล่น</a></div></details>
+<a href="rights.html">สิทธิ์และโควตา</a>
+<a href="help.html">แก้ปัญหา</a>
+<a href="contact.html">ติดต่อผู้ดูแลบอท</a>
+<a href="credits.html">เครดิต</a></nav>
+<main id="content">
+
+<h1>ตั้งค่า YakBot</h1>
+<p>เริ่มติดตามสถานะเว็บไซต์และโฮสต์ใน Discord ด้วยระบบ 4 มอนิเตอร์และแจ้งเตือน ซึ่งเปิดให้ทุกเซิร์ฟเวอร์ใหม่</p>
+<a class="invite" href="https://discord.com/oauth2/authorize?client_id=1555179219745767465">เชิญ YakBot เข้าเซิร์ฟเวอร์ ↗</a>
+<h2 id="start">เริ่มต้นใช้งาน</h2><ol>
+<li>กดปุ่มเชิญ เลือกเซิร์ฟเวอร์ที่คุณดูแล แล้วยืนยันใน Discord</li>
+<li>ให้บอทมีสิทธิ์ View Channel, Send Messages, Embed Links และ Read Message History ในช่องโพสต์และช่องแจ้งเตือน</li>
+<li>ใช้บัญชีเจ้าของเซิร์ฟเวอร์หรือ Administrator เรียก <code>/add-monitor-post</code> เลือกช่องโพสต์ ช่องแจ้งเตือน และกำหนดว่าจะเปิดแจ้งเตือนหรือไม่</li>
+<li>ใช้ <code>/add-monitor-target-http</code> เลือก Post ID กรอกชื่อและ URL ของเว็บไซต์ เมื่อตรวจสำเร็จ ให้เปิดช่องโพสต์เพื่อดูสถานะ</li></ol><a href="monitor.html">ดูคู่มือมอนิเตอร์และแจ้งเตือน →</a>
+</main><footer>YakBotGuide · คู่มือแอดมิน Discord</footer>
+</body></html>
