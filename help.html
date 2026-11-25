@@ -6,41 +6,101 @@
 <title>แก้ปัญหา | YakBotGuide</title>
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="guide-key.js" defer></script>
+<script src="guide-token.js" defer></script>
+<script src="guide.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#content">ข้ามไปยังเนื้อหา</a>
-<header><div class="bar"><a class="brand" href="index.html"><img src="icon.png" alt=""><b>YakBotGuide</b></a><span class="tag">คู่มือแอดมิน Discord</span>
+<header><div class="bar"><a class="brand" href="index.html"><img src="icon.png" alt=""><b>YakBotGuide</b></a><span class="tag"><b>คู่มือการตั้งค่า</b></span>
 <details class="mobile"><summary aria-label="เมนูหลัก"><span aria-hidden="true">☰</span> เมนู</summary><nav aria-label="เมนูหลักบนมือถือ"><a href="index.html">หน้าแรก</a>
-<details class="sub"><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html">ตรวจเครือข่าย</a>
-<a href="monitor.html">มอนิเตอร์และแจ้งเตือน</a>
-<a href="exchange.html">อัตราแลกเปลี่ยน</a>
-<a href="oil.html">ราคาน้ำมัน PTT</a>
-<a href="gold.html">ราคาทองสมาคมฯ</a>
-<a href="gold-hsh.html">ราคาทองฮั่วเซ่งเฮง</a>
-<a href="players.html">ประกาศผู้เล่น</a></div></details>
-<a href="rights.html">สิทธิ์และโควตา</a>
+<details class="sub" hidden><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html" data-guide-system="2" hidden>ตรวจเครือข่าย</a>
+<a href="monitor.html" data-guide-system="4" hidden>มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html" data-guide-system="5" hidden>อัตราแลกเปลี่ยน</a>
+<a href="oil.html" data-guide-system="6" hidden>ราคาน้ำมัน PTT</a>
+<a href="gold.html" data-guide-system="7" hidden>ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html" data-guide-system="8" hidden>ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html" data-guide-system="9" hidden>ประกาศผู้เล่น</a></div></details>
 <a href="help.html" aria-current="page">แก้ปัญหา</a>
 <a href="contact.html">ติดต่อผู้ดูแลบอท</a>
 <a href="credits.html">เครดิต</a></nav></details></div></header>
 <img class="banner" src="banner.png" alt="แบนเนอร์ YakBot">
 <nav class="desk" aria-label="เมนูหลัก"><a href="index.html">หน้าแรก</a>
-<details class="sub"><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html">ตรวจเครือข่าย</a>
-<a href="monitor.html">มอนิเตอร์และแจ้งเตือน</a>
-<a href="exchange.html">อัตราแลกเปลี่ยน</a>
-<a href="oil.html">ราคาน้ำมัน PTT</a>
-<a href="gold.html">ราคาทองสมาคมฯ</a>
-<a href="gold-hsh.html">ราคาทองฮั่วเซ่งเฮง</a>
-<a href="players.html">ประกาศผู้เล่น</a></div></details>
-<a href="rights.html">สิทธิ์และโควตา</a>
+<details class="sub" hidden><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html" data-guide-system="2" hidden>ตรวจเครือข่าย</a>
+<a href="monitor.html" data-guide-system="4" hidden>มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html" data-guide-system="5" hidden>อัตราแลกเปลี่ยน</a>
+<a href="oil.html" data-guide-system="6" hidden>ราคาน้ำมัน PTT</a>
+<a href="gold.html" data-guide-system="7" hidden>ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html" data-guide-system="8" hidden>ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html" data-guide-system="9" hidden>ประกาศผู้เล่น</a></div></details>
 <a href="help.html" aria-current="page">แก้ปัญหา</a>
 <a href="contact.html">ติดต่อผู้ดูแลบอท</a>
 <a href="credits.html">เครดิต</a></nav>
+<aside id="guide-status" class="guide-status" aria-live="polite">
+<p align="center">ใช้คำสั่ง /guide ในเซิร์ฟเวอร์ Discord แล้วกดลิงก์ เพื่อดูคู่มือ YakBot สำหรับเซิร์ฟเวอร์ของคุณ</p>
+<button type="button" hidden>เปลี่ยนเซิร์ฟเวอร์</button>
+<noscript>เปิด JavaScript ในเบราว์เซอร์เพื่อตรวจลิงก์และแสดงคู่มือ</noscript>
+</aside>
 <main id="content">
-
 <h1>แก้ปัญหา</h1>
-<details><summary>ไม่เห็นคำสั่งในเมนู /</summary><p>ตรวจสิทธิ์ Administrator และดูว่าระบบที่ต้องการต้องขอเปิดเพิ่มหรือไม่</p>
-</details><details><summary>บอทโพสต์ไม่ได้</summary><p>ตรวจสิทธิ์บอทในช่องที่เลือกตาม<a href="index.html#start">ขั้นตอนเริ่มต้นใช้งาน</a> รวมถึงสิทธิ์ที่กำหนดทับในระดับช่อง</p>
-</details><details><summary>สร้างโพสต์เพิ่มไม่ได้</summary><p>ตรวจจำนวนโพสต์เดิมด้วยคำสั่ง list ของระบบ หากต้องการเพียงย้ายช่อง ให้ใช้คำสั่ง update แล้วเลือก Post ID เดิม</p>
+<p>เลือกหัวข้อที่ตรงกับปัญหาเพื่อดูวิธีตรวจสอบและแก้ไขเบื้องต้น</p>
+
+<h2>การเปิดคู่มือ</h2>
+<details><summary>เปิดคู่มือแล้วไม่เห็นเมนูระบบ</summary>
+<p>ใช้คำสั่ง <code>/guide</code> ในเซิร์ฟเวอร์ Discord ที่ต้องการ แล้วเปิดลิงก์ที่ได้รับจากบอท เมนูจะแสดงตามระบบที่เซิร์ฟเวอร์นั้นมีสิทธิ์และเปิดใช้งานอยู่ หากระบบที่ต้องการยังไม่ปรากฏ ให้ติดต่อผู้ดูแลบอทเพื่อตรวจสอบสิทธิ์</p>
 </details>
-</main><footer>YakBotGuide | คู่มือแอดมิน Discord</footer>
+<details><summary>ลิงก์คู่มือหมดอายุหรือเปิดไม่ได้</summary>
+<p>ลิงก์คู่มือมีอายุ 1 ชั่วโมง ให้ใช้ <code>/guide</code> เพื่อขอลิงก์ใหม่ แล้วเปิดจากข้อความตอบกลับของบอทโดยตรง ตรวจว่าเบราว์เซอร์เปิดใช้งาน JavaScript หากลิงก์ใหม่ยังเปิดไม่ได้ ให้ติดต่อผู้ดูแลบอทพร้อมข้อความผิดพลาดที่แสดงบนหน้าเว็บ</p>
+</details>
+<details><summary>คู่มือแสดงข้อมูลของเซิร์ฟเวอร์อื่น</summary>
+<p>ใช้ <code>/guide</code> ในเซิร์ฟเวอร์ที่ถูกต้อง แล้วเปิดลิงก์ใหม่ หากต้องการล้างเซิร์ฟเวอร์ที่เลือกไว้ ให้กดปุ่ม <strong>เปลี่ยนเซิร์ฟเวอร์</strong> บนหน้าคู่มือก่อนเปิดลิงก์ใหม่</p>
+</details>
+
+<h2>คำสั่งและสิทธิ์</h2>
+<details><summary>ไม่เห็นคำสั่งในเมนู /</summary>
+<p>ใช้คำสั่งภายในเซิร์ฟเวอร์ที่มี YakBot และตรวจว่าคุณเป็นเจ้าของเซิร์ฟเวอร์หรือมีสิทธิ์ Administrator หากไม่เห็นคำสั่งของบางระบบ ให้ติดต่อผู้ดูแลบอทเพื่อตรวจว่าระบบนั้นเปิดใช้งานให้เซิร์ฟเวอร์แล้วหรือไม่</p>
+</details>
+<details><summary>ขึ้นว่าเซิร์ฟเวอร์ไม่มีสิทธิ์ใช้งานระบบนี้</summary>
+<p>ติดต่อผู้ดูแลบอทพร้อม Server ID และชื่อระบบที่ต้องการใช้งาน เพื่อให้ตรวจสิทธิ์ของเซิร์ฟเวอร์ การให้สิทธิ์ Administrator กับผู้ใช้เพียงอย่างเดียวไม่ได้เปิดสิทธิ์ระบบเพิ่มเติมให้เซิร์ฟเวอร์</p>
+</details>
+<details><summary>บอทปิดปรับปรุงหรือระบบถูกปิดใช้งาน</summary>
+<p>หากขึ้นว่า “บอทปิดปรับปรุงชั่วคราว” หรือ “ระบบนี้ถูกปิดใช้งานจากผู้พัฒนาระบบ” ให้รอประกาศหรือติดต่อผู้ดูแลบอทเพื่อตรวจสอบสถานะ</p>
+</details>
+<details><summary>ขึ้นว่าให้รอสักครู่หรือมีคำสั่งทำงานอยู่</summary>
+<p>รอคำสั่งเดิมทำงานเสร็จแล้วจึงลองใหม่ หลีกเลี่ยงการส่งคำสั่งซ้ำติดกัน หากรอแล้วยังเกิดปัญหา ให้แจ้งชื่อคำสั่งและเวลาที่เกิดปัญหาแก่ผู้ดูแลบอท</p>
+</details>
+<details><summary>ทำรายการไม่สำเร็จ แม้ตรวจสิทธิ์แล้ว</summary>
+<p>ตรวจสิทธิ์บอทในช่องที่ใช้งานตาม <a href="index.html#start">ขั้นตอนเริ่มต้นใช้งาน</a> หากยังทำรายการไม่ได้ ให้ส่งชื่อคำสั่ง เวลาที่เกิดปัญหา และภาพข้อความผิดพลาดให้ผู้ดูแลบอทตรวจสอบ</p>
+</details>
+
+<h2>โพสต์และมอนิเตอร์</h2>
+<details><summary>บอทโพสต์ไม่ได้</summary>
+<p>ตรวจสิทธิ์ View Channel, Send Messages, Embed Links และ Read Message History ในช่องโพสต์ตาม <a href="index.html#start">ขั้นตอนเริ่มต้นใช้งาน</a> รวมถึงสิทธิ์ที่กำหนดทับในระดับช่อง หากใช้ช่องแจ้งเตือนแยก ให้ตรวจสิทธิ์ดูช่อง ส่งข้อความ และฝังลิงก์ในช่องนั้นด้วย</p>
+</details>
+<details><summary>สร้างโพสต์เพิ่มไม่ได้</summary>
+<p>ตรวจจำนวนโพสต์เดิมด้วยคำสั่ง list ของระบบ หากต้องการเพียงย้ายช่อง ให้ใช้คำสั่ง update แล้วเลือก Post ID เดิม หากถึงจำนวนโพสต์ที่ได้รับอนุญาต ให้ติดต่อผู้ดูแลบอทเพื่อตรวจสอบโควตา</p>
+</details>
+<details><summary>เพิ่มรายการตรวจสอบไม่ได้</summary>
+<p>สร้างโพสต์ด้วย <code>/add-monitor-post</code> ก่อนเพิ่ม target แล้วเลือก Post ID ของโพสต์นั้น ตรวจข้อมูลในแบบฟอร์มให้ครบ โดย Port ต้องเป็นจำนวนเต็มระหว่าง 1 ถึง 65535</p>
+</details>
+<details><summary>ไม่พบ Post ID</summary>
+<p>ตรวจรายการโพสต์ด้วยคำสั่ง list ของระบบที่ต้องการ และใช้คำสั่งในเซิร์ฟเวอร์ที่สร้างโพสต์นั้น ตรวจว่าเลือก Post ID ถูกต้องและโพสต์ยังไม่ได้ถูกลบ</p>
+</details>
+<details><summary>แบบฟอร์มแจ้งให้เปิดใหม่</summary>
+<p>เรียกคำสั่งเพิ่มรายการตรวจสอบอีกครั้ง แล้วกรอกและส่งแบบฟอร์มที่เปิดขึ้นใหม่ หากยังพบปัญหา ให้แจ้งผู้ดูแลบอทพร้อมชื่อคำสั่งและภาพข้อความผิดพลาด</p>
+</details>
+<details><summary>ยกเลิกโพสต์แล้ว แต่ข้อความยังอยู่ใน Discord</summary>
+<p>หากบอทแจ้งว่า “ยกเลิกโพสต์แล้ว แต่ลบข้อความใน Discord ไม่สำเร็จ” การยกเลิกโพสต์เสร็จแล้ว แต่ต้องให้แอดมินลบข้อความเดิมในช่องด้วยตนเอง</p>
+</details>
+
+<h2>ยังแก้ปัญหาไม่ได้</h2>
+<p>ติดต่อผ่านหน้า <a href="contact.html">ติดต่อผู้ดูแลบอท</a> พร้อมข้อมูลต่อไปนี้เพื่อช่วยให้ตรวจสอบได้เร็วขึ้น</p>
+<ul>
+<li>Server ID ของเซิร์ฟเวอร์ที่เกิดปัญหา</li>
+<li>ชื่อคำสั่งและระบบที่ใช้งาน</li>
+<li>ชื่อช่องหรือ Channel ID และ Post ID หากมี</li>
+<li>วันและเวลาที่เกิดปัญหา</li>
+<li>ภาพข้อความผิดพลาดและขั้นตอนที่ทำก่อนเกิดปัญหา</li>
+</ul>
+</main><footer align="center">YakBot 1.0</footer>
 </body></html>

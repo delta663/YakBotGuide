@@ -6,44 +6,70 @@
 <title>หน้าแรก | YakBotGuide</title>
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="guide-key.js" defer></script>
+<script src="guide-token.js" defer></script>
+<script src="guide.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#content">ข้ามไปยังเนื้อหา</a>
-<header><div class="bar"><a class="brand" href="index.html"><img src="icon.png" alt=""><b>YakBotGuide</b></a><span class="tag">คู่มือแอดมิน Discord</span>
+<header><div class="bar"><a class="brand" href="index.html"><img src="icon.png" alt=""><b>YakBotGuide</b></a><span class="tag"><b>คู่มือการตั้งค่า</b></span>
 <details class="mobile"><summary aria-label="เมนูหลัก"><span aria-hidden="true">☰</span> เมนู</summary><nav aria-label="เมนูหลักบนมือถือ"><a href="index.html" aria-current="page">หน้าแรก</a>
-<details class="sub"><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html">ตรวจเครือข่าย</a>
-<a href="monitor.html">มอนิเตอร์และแจ้งเตือน</a>
-<a href="exchange.html">อัตราแลกเปลี่ยน</a>
-<a href="oil.html">ราคาน้ำมัน PTT</a>
-<a href="gold.html">ราคาทองสมาคมฯ</a>
-<a href="gold-hsh.html">ราคาทองฮั่วเซ่งเฮง</a>
-<a href="players.html">ประกาศผู้เล่น</a></div></details>
-<a href="rights.html">สิทธิ์และโควตา</a>
+<details class="sub" hidden><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html" data-guide-system="2" hidden>ตรวจเครือข่าย</a>
+<a href="monitor.html" data-guide-system="4" hidden>มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html" data-guide-system="5" hidden>อัตราแลกเปลี่ยน</a>
+<a href="oil.html" data-guide-system="6" hidden>ราคาน้ำมัน PTT</a>
+<a href="gold.html" data-guide-system="7" hidden>ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html" data-guide-system="8" hidden>ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html" data-guide-system="9" hidden>ประกาศผู้เล่น</a></div></details>
 <a href="help.html">แก้ปัญหา</a>
 <a href="contact.html">ติดต่อผู้ดูแลบอท</a>
 <a href="credits.html">เครดิต</a></nav></details></div></header>
 <img class="banner" src="banner.png" alt="แบนเนอร์ YakBot">
 <nav class="desk" aria-label="เมนูหลัก"><a href="index.html" aria-current="page">หน้าแรก</a>
-<details class="sub"><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html">ตรวจเครือข่าย</a>
-<a href="monitor.html">มอนิเตอร์และแจ้งเตือน</a>
-<a href="exchange.html">อัตราแลกเปลี่ยน</a>
-<a href="oil.html">ราคาน้ำมัน PTT</a>
-<a href="gold.html">ราคาทองสมาคมฯ</a>
-<a href="gold-hsh.html">ราคาทองฮั่วเซ่งเฮง</a>
-<a href="players.html">ประกาศผู้เล่น</a></div></details>
-<a href="rights.html">สิทธิ์และโควตา</a>
+<details class="sub" hidden><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html" data-guide-system="2" hidden>ตรวจเครือข่าย</a>
+<a href="monitor.html" data-guide-system="4" hidden>มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html" data-guide-system="5" hidden>อัตราแลกเปลี่ยน</a>
+<a href="oil.html" data-guide-system="6" hidden>ราคาน้ำมัน PTT</a>
+<a href="gold.html" data-guide-system="7" hidden>ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html" data-guide-system="8" hidden>ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html" data-guide-system="9" hidden>ประกาศผู้เล่น</a></div></details>
 <a href="help.html">แก้ปัญหา</a>
 <a href="contact.html">ติดต่อผู้ดูแลบอท</a>
 <a href="credits.html">เครดิต</a></nav>
+<aside id="guide-status" class="guide-status" aria-live="polite">
+<p align="center">ใช้คำสั่ง /guide ในเซิร์ฟเวอร์ Discord แล้วกดลิงก์ เพื่อดูคู่มือ YakBot สำหรับเซิร์ฟเวอร์ของคุณ</p>
+<button type="button" hidden>เปลี่ยนเซิร์ฟเวอร์</button>
+<noscript>เปิด JavaScript ในเบราว์เซอร์เพื่อตรวจลิงก์และแสดงคู่มือ</noscript>
+</aside>
 <main id="content">
 
-<h1>ตั้งค่า YakBot</h1>
-<p>เริ่มติดตามสถานะเว็บไซต์และโฮสต์ใน Discord ด้วยระบบ 4 มอนิเตอร์และแจ้งเตือน ซึ่งเปิดให้ทุกเซิร์ฟเวอร์ใหม่</p>
+<p align="center">
+  <img src="icon.png" alt="YakBot" width="350">
+</p>
+<h1>YakBot</h1>
+<p>บอท Discord สำหรับตรวจสอบเครือข่าย เฝ้าระวังสถานะเซิร์ฟเวอร์และเว็บไซต์ พร้อมแจ้งเตือนเมื่อสถานะเปลี่ยน</p>
+<hr>
+<h1 id="start">เริ่มต้นใช้งาน</h1>
+<h2>เชิญบอทเข้าเซิร์ฟเวอร์</h2>
 <a class="invite" href="https://discord.com/oauth2/authorize?client_id=1555179219745767465">เชิญ YakBot เข้าเซิร์ฟเวอร์ ↗</a>
-<h2 id="start">เริ่มต้นใช้งาน</h2><ol>
-<li>กดปุ่มเชิญ เลือกเซิร์ฟเวอร์ที่คุณดูแล แล้วยืนยันใน Discord</li>
-<li>ให้บอทมีสิทธิ์ View Channel, Send Messages, Embed Links และ Read Message History ในช่องโพสต์และช่องแจ้งเตือน</li>
-<li>ใช้บัญชีเจ้าของเซิร์ฟเวอร์หรือ Administrator เรียก <code>/add-monitor-post</code> เลือกช่องโพสต์ ช่องแจ้งเตือน และกำหนดว่าจะเปิดแจ้งเตือนหรือไม่</li>
-<li>ใช้ <code>/add-monitor-target-http</code> เลือก Post ID กรอกชื่อและ URL ของเว็บไซต์ เมื่อตรวจสำเร็จ ให้เปิดช่องโพสต์เพื่อดูสถานะ</li></ol><a href="monitor.html">ดูคู่มือมอนิเตอร์และแจ้งเตือน →</a>
-</main><footer>YakBotGuide | คู่มือแอดมิน Discord</footer>
+<ul>
+<li>กดปุ่มเชิญบอทด้านบน</li>
+<li>เลือกเซิร์ฟเวอร์ที่คุณดูแล</li>
+<li>กดยืนยัน</li>
+</ul>
+<h2>ให้บอทมีสิทธิ์ในช่อง</h2>
+<ul>
+<li>View Channel / ดูช่อง</li>
+<li>Send Messages / ส่งข้อความ</li>
+<li>Embed Links / ฝังลิงก์</li>
+<li>Read Message History / อ่านประวัติข้อความ</li>
+</ul>
+<h2>ตั้งค่า YakBot ของคุณ</h2>
+<ul>
+<li>ใช้คำสั่ง <code>/guide</code> ในเซิร์ฟเวอร์ Discord ของคุณ ด้วยสิทธิ์ Owner / Administrator</li>
+<li>กดลิงก์ <strong>เปิดคู่มือ YakBot</strong> ที่ได้รับจากบอท โดยลิงก์จะมีอายุ 1 ชั่วโมง</li>
+<li>ดูการตั้งค่าของระบบต่างๆ ได้จากเมนู <strong>คู่มือระบบ</strong></li>
+</ul>
+<hr>
+</main><footer align="center">YakBot 1.0</footer>
 </body></html>

@@ -6,43 +6,50 @@
 <title>เครดิต | YakBotGuide</title>
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="guide-key.js" defer></script>
+<script src="guide-token.js" defer></script>
+<script src="guide.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#content">ข้ามไปยังเนื้อหา</a>
-<header><div class="bar"><a class="brand" href="index.html"><img src="icon.png" alt=""><b>YakBotGuide</b></a><span class="tag">คู่มือแอดมิน Discord</span>
+<header><div class="bar"><a class="brand" href="index.html"><img src="icon.png" alt=""><b>YakBotGuide</b></a><span class="tag"><b>คู่มือการตั้งค่า</b></span>
 <details class="mobile"><summary aria-label="เมนูหลัก"><span aria-hidden="true">☰</span> เมนู</summary><nav aria-label="เมนูหลักบนมือถือ"><a href="index.html">หน้าแรก</a>
-<details class="sub"><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html">ตรวจเครือข่าย</a>
-<a href="monitor.html">มอนิเตอร์และแจ้งเตือน</a>
-<a href="exchange.html">อัตราแลกเปลี่ยน</a>
-<a href="oil.html">ราคาน้ำมัน PTT</a>
-<a href="gold.html">ราคาทองสมาคมฯ</a>
-<a href="gold-hsh.html">ราคาทองฮั่วเซ่งเฮง</a>
-<a href="players.html">ประกาศผู้เล่น</a></div></details>
-<a href="rights.html">สิทธิ์และโควตา</a>
+<details class="sub" hidden><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html" data-guide-system="2" hidden>ตรวจเครือข่าย</a>
+<a href="monitor.html" data-guide-system="4" hidden>มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html" data-guide-system="5" hidden>อัตราแลกเปลี่ยน</a>
+<a href="oil.html" data-guide-system="6" hidden>ราคาน้ำมัน PTT</a>
+<a href="gold.html" data-guide-system="7" hidden>ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html" data-guide-system="8" hidden>ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html" data-guide-system="9" hidden>ประกาศผู้เล่น</a></div></details>
 <a href="help.html">แก้ปัญหา</a>
 <a href="contact.html">ติดต่อผู้ดูแลบอท</a>
 <a href="credits.html" aria-current="page">เครดิต</a></nav></details></div></header>
 <img class="banner" src="banner.png" alt="แบนเนอร์ YakBot">
 <nav class="desk" aria-label="เมนูหลัก"><a href="index.html">หน้าแรก</a>
-<details class="sub"><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html">ตรวจเครือข่าย</a>
-<a href="monitor.html">มอนิเตอร์และแจ้งเตือน</a>
-<a href="exchange.html">อัตราแลกเปลี่ยน</a>
-<a href="oil.html">ราคาน้ำมัน PTT</a>
-<a href="gold.html">ราคาทองสมาคมฯ</a>
-<a href="gold-hsh.html">ราคาทองฮั่วเซ่งเฮง</a>
-<a href="players.html">ประกาศผู้เล่น</a></div></details>
-<a href="rights.html">สิทธิ์และโควตา</a>
+<details class="sub" hidden><summary>คู่มือระบบ</summary><div class="dropdown"><a href="network.html" data-guide-system="2" hidden>ตรวจเครือข่าย</a>
+<a href="monitor.html" data-guide-system="4" hidden>มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html" data-guide-system="5" hidden>อัตราแลกเปลี่ยน</a>
+<a href="oil.html" data-guide-system="6" hidden>ราคาน้ำมัน PTT</a>
+<a href="gold.html" data-guide-system="7" hidden>ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html" data-guide-system="8" hidden>ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html" data-guide-system="9" hidden>ประกาศผู้เล่น</a></div></details>
 <a href="help.html">แก้ปัญหา</a>
 <a href="contact.html">ติดต่อผู้ดูแลบอท</a>
 <a href="credits.html" aria-current="page">เครดิต</a></nav>
+<aside id="guide-status" class="guide-status" aria-live="polite">
+<p align="center">ใช้คำสั่ง /guide ในเซิร์ฟเวอร์ Discord แล้วกดลิงก์ เพื่อดูคู่มือ YakBot สำหรับเซิร์ฟเวอร์ของคุณ</p>
+<button type="button" hidden>เปลี่ยนเซิร์ฟเวอร์</button>
+<noscript>เปิด JavaScript ในเบราว์เซอร์เพื่อตรวจลิงก์และแสดงคู่มือ</noscript>
+</aside>
 <main id="content">
 
 <h1>เครดิต</h1>
-<p>แหล่งข้อมูลที่ใช้ในโพสต์ของ YakBot</p>
+<p>แหล่งข้อมูลที่ใช้ใน YakBot</p>
 <ul>
-<li>อัตราแลกเปลี่ยน — Frankfurter</li>
-<li>ราคาน้ำมัน PTT — ตารางราคาขายปลีกของสำนักงานนโยบายและแผนพลังงาน (สนพ.)</li>
-<li>ราคาทองสมาคมฯ — สมาคมค้าทองคำ</li>
-<li>ราคาทองฮั่วเซ่งเฮง — ฮั่วเซ่งเฮง</li></ul>
-</main><footer>YakBotGuide | คู่มือแอดมิน Discord</footer>
+<li>อัตราแลกเปลี่ยน — <a href="https://frankfurter.dev/th/" target="_blank">Frankfurter</a></li>
+<li>ราคาน้ำมัน PTT — <a href="https://www.eppo.go.th/data-energy-statistic/energy-price-th/%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b8%b2%e0%b8%82%e0%b8%b2%e0%b8%a2%e0%b8%9b%e0%b8%a5%e0%b8%b5%e0%b8%81%e0%b8%99%e0%b9%89%e0%b8%b3%e0%b8%a1%e0%b8%b1%e0%b8%99/" target="_blank">สำนักงานนโยบายและแผนพลังงาน</a></li>
+<li>ราคาทองสมาคมฯ — <a href="https://goldtraders.or.th/" target="_blank">สมาคมค้าทองคำ</a></li>
+<li>ราคาทองฮั่วเซ่งเฮง — <a href="https://www.huasengheng.com/" target="_blank">ฮั่วเซ่งเฮง</a></li>
+</ul>
+</main><footer align="center">YakBot 1.0</footer>
 </body></html>

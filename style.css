@@ -52,3 +52,11 @@ footer { padding-block: 18px; font-size: 14px; }
   .mobile .dropdown { position: static; padding-left: 14px; border: 0; border-left: 2px solid var(--line); box-shadow: none; }
   main { margin-top: 24px; }
 }
+
+/* Guide access state must also override navigation and layout display rules. */
+[hidden] { display: none !important; }
+.guide-status { width: min(100% - 40px, 840px); margin: 24px auto; padding: 12px 16px; background: #eef1e7; border-radius: 6px; overflow-wrap: anywhere; }
+.guide-status p { margin: 0; }
+.guide-status button { margin-top: 8px; padding: 6px 12px; font: inherit; color: var(--ink); background: white; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
+
+main img { max-width: 100%; height: auto; }

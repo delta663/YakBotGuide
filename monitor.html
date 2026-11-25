@@ -6,36 +6,42 @@
 <title>มอนิเตอร์และแจ้งเตือน | YakBotGuide</title>
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="guide-key.js" defer></script>
+<script src="guide-token.js" defer></script>
+<script src="guide.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#content">ข้ามไปยังเนื้อหา</a>
-<header><div class="bar"><a class="brand" href="index.html"><img src="icon.png" alt=""><b>YakBotGuide</b></a><span class="tag">คู่มือแอดมิน Discord</span>
+<header><div class="bar"><a class="brand" href="index.html"><img src="icon.png" alt=""><b>YakBotGuide</b></a><span class="tag"><b>คู่มือการตั้งค่า</b></span>
 <details class="mobile"><summary aria-label="เมนูหลัก"><span aria-hidden="true">☰</span> เมนู</summary><nav aria-label="เมนูหลักบนมือถือ"><a href="index.html">หน้าแรก</a>
-<details class="sub"><summary class="selected">คู่มือระบบ</summary><div class="dropdown"><a href="network.html">ตรวจเครือข่าย</a>
-<a href="monitor.html" aria-current="page">มอนิเตอร์และแจ้งเตือน</a>
-<a href="exchange.html">อัตราแลกเปลี่ยน</a>
-<a href="oil.html">ราคาน้ำมัน PTT</a>
-<a href="gold.html">ราคาทองสมาคมฯ</a>
-<a href="gold-hsh.html">ราคาทองฮั่วเซ่งเฮง</a>
-<a href="players.html">ประกาศผู้เล่น</a></div></details>
-<a href="rights.html">สิทธิ์และโควตา</a>
+<details class="sub" hidden><summary class="selected">คู่มือระบบ</summary><div class="dropdown"><a href="network.html" data-guide-system="2" hidden>ตรวจเครือข่าย</a>
+<a href="monitor.html" data-guide-system="4" hidden aria-current="page">มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html" data-guide-system="5" hidden>อัตราแลกเปลี่ยน</a>
+<a href="oil.html" data-guide-system="6" hidden>ราคาน้ำมัน PTT</a>
+<a href="gold.html" data-guide-system="7" hidden>ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html" data-guide-system="8" hidden>ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html" data-guide-system="9" hidden>ประกาศผู้เล่น</a></div></details>
 <a href="help.html">แก้ปัญหา</a>
 <a href="contact.html">ติดต่อผู้ดูแลบอท</a>
 <a href="credits.html">เครดิต</a></nav></details></div></header>
 <img class="banner" src="banner.png" alt="แบนเนอร์ YakBot">
 <nav class="desk" aria-label="เมนูหลัก"><a href="index.html">หน้าแรก</a>
-<details class="sub"><summary class="selected">คู่มือระบบ</summary><div class="dropdown"><a href="network.html">ตรวจเครือข่าย</a>
-<a href="monitor.html" aria-current="page">มอนิเตอร์และแจ้งเตือน</a>
-<a href="exchange.html">อัตราแลกเปลี่ยน</a>
-<a href="oil.html">ราคาน้ำมัน PTT</a>
-<a href="gold.html">ราคาทองสมาคมฯ</a>
-<a href="gold-hsh.html">ราคาทองฮั่วเซ่งเฮง</a>
-<a href="players.html">ประกาศผู้เล่น</a></div></details>
-<a href="rights.html">สิทธิ์และโควตา</a>
+<details class="sub" hidden><summary class="selected">คู่มือระบบ</summary><div class="dropdown"><a href="network.html" data-guide-system="2" hidden>ตรวจเครือข่าย</a>
+<a href="monitor.html" data-guide-system="4" hidden aria-current="page">มอนิเตอร์และแจ้งเตือน</a>
+<a href="exchange.html" data-guide-system="5" hidden>อัตราแลกเปลี่ยน</a>
+<a href="oil.html" data-guide-system="6" hidden>ราคาน้ำมัน PTT</a>
+<a href="gold.html" data-guide-system="7" hidden>ราคาทองสมาคมฯ</a>
+<a href="gold-hsh.html" data-guide-system="8" hidden>ราคาทองฮั่วเซ่งเฮง</a>
+<a href="players.html" data-guide-system="9" hidden>ประกาศผู้เล่น</a></div></details>
 <a href="help.html">แก้ปัญหา</a>
 <a href="contact.html">ติดต่อผู้ดูแลบอท</a>
 <a href="credits.html">เครดิต</a></nav>
-<main id="content">
+<aside id="guide-status" class="guide-status" aria-live="polite">
+<p align="center">ใช้คำสั่ง /guide ในเซิร์ฟเวอร์ Discord แล้วกดลิงก์ เพื่อดูคู่มือ YakBot สำหรับเซิร์ฟเวอร์ของคุณ</p>
+<button type="button" hidden>เปลี่ยนเซิร์ฟเวอร์</button>
+<noscript>เปิด JavaScript ในเบราว์เซอร์เพื่อตรวจลิงก์และแสดงคู่มือ</noscript>
+</aside>
+<main id="content" data-guide-system="4" hidden>
 <p class="eyebrow">ระบบเปิดให้เซิร์ฟเวอร์ใหม่</p>
 <h1>มอนิเตอร์และแจ้งเตือน</h1>
 <p>ติดตามสถานะเว็บไซต์หรือโฮสต์ต่อเนื่อง และแจ้งเมื่อสถานะเปลี่ยน</p>
@@ -43,5 +49,5 @@
 <li>ใช้ <code>/add-monitor-post</code> เลือกช่องโพสต์ ช่องแจ้งเตือน และเปิดหรือพักการแจ้งเตือน</li>
 <li>เลือก <code>/add-monitor-target-http</code>, <code>/add-monitor-target-tcp</code> หรือ <code>/add-monitor-target-icmp</code> แล้วเลือก Post ID ในฟอร์ม กรอก Target ID ชื่อที่แสดง และปลายทาง บอทจะทดสอบก่อนบันทึก</li>
 <li>ใช้ <code>/detail-monitor-post</code> ดูผล หรือ <code>/update-monitor-post</code> ย้ายช่อง ใช้ <code>/remove-monitor-target</code> เพื่อลบปลายทางเดียว การใช้ <code>/remove-monitor-post</code> จะลบทั้งโพสต์และเป้าหมายภายใน</li></ol>
-</main><footer>YakBotGuide | คู่มือแอดมิน Discord</footer>
+</main><footer align="center">YakBot 1.0</footer>
 </body></html>
